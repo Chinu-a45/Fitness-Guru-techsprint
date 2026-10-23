@@ -434,7 +434,7 @@ export function OnboardingPage() {
 const styles = {
   page: {
     minHeight: '100dvh',
-    background: '#0A0A0A',
+    background: 'var(--color-bg)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -448,18 +448,18 @@ const styles = {
     display: 'flex', alignItems: 'center', gap: '0.25rem',
   },
   card: {
-    background: '#161616',
+    background: 'var(--color-surface)',
     borderRadius: 'var(--radius-xl)',
     padding: '2rem',
     width: '100%',
     maxWidth: '420px',
-    boxShadow: '0 12px 48px rgba(0,0,0,0.75)',
-    border: '1px solid #2A2A2A',
+    boxShadow: 'var(--shadow-modal)',
+    border: '1px solid var(--color-border)',
   },
   stepContent: {
     display: 'flex', flexDirection: 'column', gap: '1.25rem',
   },
   heading: {
-    fontSize: '1.35rem', fontWeight: 700, color: '#F0F0F0',
+    fontSize: '1.35rem', fontWeight: 700, color: 'var(--color-text)',
   },
 };

@@ -379,7 +379,7 @@ export function ClientProfile() {
       </div>
 
       {/* ── Consent ── */}
-      <div className="card" style={{ marginBottom: '1rem', background: '#181818ff', borderColor: '#5e5e5eff' }}>
+      <div className="card" style={{ marginBottom: '1rem' }}>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.25rem' }}>
           <Shield size={16} color="var(--color-success)" />
           <h2 style={{ fontWeight: 700, fontSize: '0.95rem' }}>Consent</h2>

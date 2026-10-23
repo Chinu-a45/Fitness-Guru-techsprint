@@ -78,8 +78,8 @@ export function TrainerLayout() {
                 width: 36,
                 height: 36,
                 borderRadius: '8px',
-                background: 'rgba(61, 255, 79, 0.1)',
-                border: '1px solid rgba(61, 255, 79, 0.2)',
+                background: 'var(--color-brand-dim)',
+                border: '1px solid rgba(22, 163, 74, 0.2)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -89,12 +89,12 @@ export function TrainerLayout() {
               <Dumbbell size={20} color="var(--color-brand)" />
             </div>
             <div>
-              <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.95rem', lineHeight: 1.2 }}>BodyBuddy</div>
+              <div style={{ color: 'var(--color-text)', fontWeight: 700, fontSize: '0.95rem', lineHeight: 1.2 }}>BodyBuddy</div>
               <div style={{ color: 'var(--color-text-muted)', fontSize: '0.72rem' }}>Trainer Dashboard</div>
             </div>
           </div>
           {profile && (
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.8rem', marginTop: '0.75rem' }}>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.8rem', marginTop: '0.75rem' }}>
               👋 {profile.full_name}
             </p>
           )}
@@ -113,7 +113,7 @@ export function TrainerLayout() {
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0.75rem 1rem',
-            color: '#fff',
+            color: 'var(--color-text)',
             flexShrink: 0,
             position: 'sticky',
             top: 0,
@@ -126,8 +126,8 @@ export function TrainerLayout() {
                 width: 32,
                 height: 32,
                 borderRadius: '8px',
-                background: 'rgba(61, 255, 79, 0.1)',
-                border: '1px solid rgba(61, 255, 79, 0.25)',
+                background: 'var(--color-brand-dim)',
+                border: '1px solid rgba(22, 163, 74, 0.25)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -136,13 +136,13 @@ export function TrainerLayout() {
               <Dumbbell size={18} color="var(--color-brand)" />
             </div>
             <div>
-              <span style={{ fontWeight: 700, fontSize: '0.95rem', letterSpacing: '-0.01em', color: '#fff' }}>BodyBuddy</span>
-              <span style={{ fontSize: '0.65rem', background: 'rgba(61, 255, 79, 0.15)', color: 'var(--color-brand)', fontWeight: 700, padding: '2px 6px', borderRadius: '4px', marginLeft: '6px' }}>TRAINER</span>
+              <span style={{ fontWeight: 700, fontSize: '0.95rem', letterSpacing: '-0.01em', color: 'var(--color-text)' }}>BodyBuddy</span>
+              <span style={{ fontSize: '0.65rem', background: 'var(--color-brand-dim)', color: 'var(--color-brand)', fontWeight: 700, padding: '2px 6px', borderRadius: '4px', marginLeft: '6px' }}>TRAINER</span>
             </div>
           </div>
           <button
             style={{
-              background: 'rgba(255,255,255,0.06)',
+              background: 'var(--color-surface-2)',
               border: '1px solid var(--color-border)',
               borderRadius: '8px',
               width: 38,
@@ -204,8 +204,8 @@ export function TrainerLayout() {
                       width: 34,
                       height: 34,
                       borderRadius: '8px',
-                      background: 'rgba(61, 255, 79, 0.1)',
-                      border: '1px solid rgba(61, 255, 79, 0.25)',
+                      background: 'var(--color-brand-dim)',
+                      border: '1px solid rgba(22, 163, 74, 0.25)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -214,14 +214,14 @@ export function TrainerLayout() {
                     <Dumbbell size={18} color="var(--color-brand)" />
                   </div>
                   <div>
-                    <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.95rem', lineHeight: 1.2 }}>BodyBuddy</div>
+                    <div style={{ color: 'var(--color-text)', fontWeight: 700, fontSize: '0.95rem', lineHeight: 1.2 }}>BodyBuddy</div>
                     <div style={{ color: 'var(--color-text-muted)', fontSize: '0.7rem' }}>Trainer Portal</div>
                   </div>
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}
                   style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
+                    background: 'var(--color-surface-2)',
                     border: '1px solid var(--color-border)',
                     borderRadius: '6px',
                     width: 32,
@@ -241,7 +241,7 @@ export function TrainerLayout() {
               {profile && (
                 <div style={{ padding: '0 1.25rem 0.85rem', borderBottom: '1px solid var(--color-border)', marginBottom: '0.75rem' }}>
                   <div style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem' }}>Trainer Account</div>
-                  <div style={{ color: '#fff', fontWeight: 600, fontSize: '0.88rem', marginTop: '2px' }}>
+                  <div style={{ color: 'var(--color-text)', fontWeight: 600, fontSize: '0.88rem', marginTop: '2px' }}>
                     👋 {profile.full_name}
                   </div>
                 </div>

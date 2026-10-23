@@ -922,13 +922,13 @@ export function TrainerChat() {
                               ? '14px 14px 2px 14px'
                               : '14px 14px 14px 2px',
                             background: isTrainer
-                              ? 'linear-gradient(135deg, #1B4D2B 0%, #153E23 100%)'
+                              ? 'linear-gradient(135deg, #16A34A 0%, #15803D 100%)'
                               : 'var(--color-surface)',
                             border: isTrainer
-                              ? '1px solid rgba(61, 255, 79, 0.25)'
+                              ? '1px solid rgba(22, 163, 74, 0.3)'
                               : '1px solid var(--color-border)',
-                            color: '#FFFFFF',
-                            boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+                            color: isTrainer ? '#FFFFFF' : 'var(--color-text)',
+                            boxShadow: isTrainer ? '0 2px 8px rgba(22, 163, 74, 0.2)' : 'var(--shadow-card)',
                             position: 'relative',
                           }}
                         >
@@ -953,7 +953,7 @@ export function TrainerChat() {
                               wordBreak: 'break-word',
                               whiteSpace: 'pre-wrap',
                               margin: 0,
-                              color: '#FFFFFF',
+                              color: isTrainer ? '#FFFFFF' : 'var(--color-text)',
                             }}
                           >
                             {item.body}

@@ -20,7 +20,15 @@ ALTER TABLE public.logs
   ADD CONSTRAINT logs_weight_kg_check
     CHECK (weight_kg IS NULL OR (weight_kg >= 30 AND weight_kg <= 250));
 
--- 3. Ensure at least one metric is filled (optional guardrail at DB level)
+-- 3. Update waist_cm constraint to range 20 - 200 cm
+ALTER TABLE public.logs
+  DROP CONSTRAINT IF EXISTS logs_waist_cm_check;
+
+ALTER TABLE public.logs
+  ADD CONSTRAINT logs_waist_cm_check
+    CHECK (waist_cm IS NULL OR (waist_cm >= 20 AND waist_cm <= 200));
+
+-- 4. Ensure at least one metric is filled (optional guardrail at DB level)
 ALTER TABLE public.logs
   DROP CONSTRAINT IF EXISTS logs_at_least_one_metric;
 

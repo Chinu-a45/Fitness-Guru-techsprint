@@ -2,7 +2,7 @@
 // ──────────────────────────────────────────────────────────────────
 // Allows the client to log weight (required), waist (optional),
 // and sleep hours (optional).
-// Validates ranges: weight 30-250 kg, waist 50-200 cm, sleep 0-24 h.
+// Validates ranges: weight 30-250 kg, waist 20-200 cm, sleep 0-24 h.
 // Shows history of last 20 logs with date stamps.
 // Unit sanity checks: warns if weight looks like lbs or jumps
 // abruptly, and if waist looks like inches instead of cm.
@@ -170,8 +170,8 @@ export function ProgressLog() {
     }
     if (waist !== '') {
       const wc = parseFloat(waist);
-      if (isNaN(wc) || wc < 50 || wc > 200)
-        errs.waist = 'Enter a waist measurement between 50 and 200 cm.';
+      if (isNaN(wc) || wc < 20 || wc > 200)
+        errs.waist = 'Enter a waist measurement between 20 and 200 cm.';
     }
     if (sleep !== '') {
       const s = parseFloat(sleep);
@@ -395,7 +395,7 @@ export function ProgressLog() {
                 onChange={(e) => setWaist(e.target.value)}
                 placeholder="Optional"
                 step="0.5"
-                min={50}
+                min={20}
                 max={200}
               />
               {formErr.waist && <p className="form-error">{formErr.waist}</p>}

@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS public.logs (
   client_id UUID NOT NULL REFERENCES public.profiles(id) ON DELETE CASCADE,
   date DATE NOT NULL,
   weight_kg NUMERIC(5, 2) CHECK (weight_kg IS NULL OR (weight_kg >= 30 AND weight_kg <= 250)),
-  waist_cm NUMERIC(5, 2) CHECK (waist_cm IS NULL OR (waist_cm >= 40 AND waist_cm <= 200)),
+  waist_cm NUMERIC(5, 2) CHECK (waist_cm IS NULL OR (waist_cm >= 20 AND waist_cm <= 200)),
   sleep_hours NUMERIC(4, 2) CHECK (sleep_hours IS NULL OR (sleep_hours >= 0 AND sleep_hours <= 24)),
   created_at TIMESTAMPTZ DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL,
   CONSTRAINT unique_client_log_date UNIQUE (client_id, date)
