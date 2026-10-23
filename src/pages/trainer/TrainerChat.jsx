@@ -80,16 +80,16 @@ function Avatar({ name, size = 42 }) {
         width: size,
         height: size,
         borderRadius: '50%',
-        background: 'linear-gradient(135deg, rgba(61, 255, 79, 0.16) 0%, rgba(31, 77, 58, 0.35) 100%)',
-        border: '1px solid rgba(61, 255, 79, 0.3)',
+        background: 'linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%)',
+        border: '1px solid #86EFAC',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--color-brand)',
+        color: '#15803D',
         fontWeight: 700,
         fontSize: Math.max(12, Math.round(size * 0.38)),
         flexShrink: 0,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
       }}
     >
       {initials}
@@ -443,8 +443,8 @@ export function TrainerChat() {
                     width: '34px',
                     height: '34px',
                     borderRadius: '8px',
-                    background: 'rgba(61, 255, 79, 0.1)',
-                    border: '1px solid rgba(61, 255, 79, 0.25)',
+                    background: 'var(--color-brand-dim)',
+                    border: '1px solid rgba(22, 163, 74, 0.25)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -453,7 +453,7 @@ export function TrainerChat() {
                   <MessageSquare size={18} color="var(--color-brand)" />
                 </div>
                 <div>
-                  <h1 style={{ fontWeight: 800, fontSize: '1.05rem', margin: 0, lineHeight: 1.2, color: '#fff' }}>
+                  <h1 style={{ fontWeight: 800, fontSize: '1.05rem', margin: 0, lineHeight: 1.2, color: 'var(--color-text)' }}>
                     Client Chats
                   </h1>
                   <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)' }}>
@@ -466,9 +466,9 @@ export function TrainerChat() {
               <button
                 onClick={() => setFilterActiveOnly(!filterActiveOnly)}
                 style={{
-                  background: filterActiveOnly ? 'rgba(61, 255, 79, 0.15)' : 'rgba(255,255,255,0.06)',
+                  background: filterActiveOnly ? 'var(--color-brand-dim)' : 'var(--color-surface-2)',
                   color: filterActiveOnly ? 'var(--color-brand)' : 'var(--color-text-muted)',
-                  border: filterActiveOnly ? '1px solid rgba(61, 255, 79, 0.35)' : '1px solid var(--color-border)',
+                  border: filterActiveOnly ? '1px solid rgba(22, 163, 74, 0.35)' : '1px solid var(--color-border)',
                   borderRadius: '999px',
                   padding: '0.35rem 0.75rem',
                   fontSize: '0.72rem',
@@ -506,7 +506,7 @@ export function TrainerChat() {
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--color-border)',
                   background: 'var(--color-surface-2)',
-                  color: '#fff',
+                  color: 'var(--color-text)',
                   fontSize: '0.875rem',
                   outline: 'none',
                   boxSizing: 'border-box',
@@ -543,7 +543,7 @@ export function TrainerChat() {
             ) : filteredClients.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '3rem 1.5rem', color: 'var(--color-text-muted)' }}>
                 <MessageSquare size={36} style={{ opacity: 0.25, margin: '0 auto 0.75rem' }} />
-                <p style={{ fontWeight: 600, fontSize: '0.95rem', color: '#fff' }}>No clients found</p>
+                <p style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--color-text)' }}>No clients found</p>
                 <p style={{ fontSize: '0.8rem', marginTop: '0.25rem' }}>
                   {search ? 'Try a different search term' : 'Invite clients using your invite code'}
                 </p>
@@ -564,10 +564,10 @@ export function TrainerChat() {
                       alignItems: 'center',
                       gap: '0.75rem',
                       padding: '0.85rem 1rem',
-                      background: isSelected ? 'rgba(61, 255, 79, 0.08)' : 'transparent',
+                      background: isSelected ? 'var(--color-brand-dim)' : 'transparent',
                       border: 'none',
                       borderLeft: isSelected ? '3px solid var(--color-brand)' : '3px solid transparent',
-                      borderBottom: '1px solid rgba(255, 255, 255, 0.04)',
+                      borderBottom: '1px solid var(--color-border)',
                       cursor: 'pointer',
                       textAlign: 'left',
                       transition: 'background 0.12s ease',
@@ -588,7 +588,7 @@ export function TrainerChat() {
                           style={{
                             fontWeight: isSelected ? 700 : 600,
                             fontSize: '0.925rem',
-                            color: '#FFFFFF',
+                            color: 'var(--color-text)',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap',
@@ -701,7 +701,7 @@ export function TrainerChat() {
                 <MessageSquare size={38} color="var(--color-brand)" style={{ opacity: 0.85 }} />
               </div>
               <div>
-                <h2 style={{ fontWeight: 800, fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                <h2 style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--color-text)', margin: 0 }}>
                   BodyBuddy Messenger
                 </h2>
                 <p style={{ fontSize: '0.88rem', maxWidth: '320px', marginTop: '0.4rem', lineHeight: 1.5, color: 'var(--color-text-muted)' }}>
@@ -720,7 +720,7 @@ export function TrainerChat() {
                   padding: '0.75rem 1rem',
                   background: 'var(--color-surface)',
                   borderBottom: '1px solid var(--color-border)',
-                  color: '#fff',
+                  color: 'var(--color-text)',
                   flexShrink: 0,
                   zIndex: 3,
                 }}
@@ -731,7 +731,7 @@ export function TrainerChat() {
                     id="chat-back-btn"
                     onClick={handleBackToClients}
                     style={{
-                      background: 'rgba(255,255,255,0.06)',
+                      background: 'var(--color-surface-2)',
                       border: '1px solid var(--color-border)',
                       color: 'var(--color-text)',
                       cursor: 'pointer',
@@ -758,7 +758,7 @@ export function TrainerChat() {
                       style={{
                         fontWeight: 700,
                         fontSize: '0.95rem',
-                        color: '#fff',
+                        color: 'var(--color-text)',
                         margin: 0,
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
@@ -793,7 +793,7 @@ export function TrainerChat() {
                       alignItems: 'center',
                       gap: '0.35rem',
                       padding: '0.4rem 0.65rem',
-                      background: 'rgba(255,255,255,0.06)',
+                      background: 'var(--color-surface-2)',
                       border: '1px solid var(--color-border)',
                       color: 'var(--color-text)',
                       borderRadius: 'var(--radius-md)',
@@ -815,7 +815,7 @@ export function TrainerChat() {
                       alignItems: 'center',
                       gap: '0.35rem',
                       padding: '0.4rem 0.65rem',
-                      background: 'rgba(255,255,255,0.06)',
+                      background: 'var(--color-surface-2)',
                       border: '1px solid var(--color-border)',
                       color: 'var(--color-text)',
                       borderRadius: 'var(--radius-md)',
@@ -843,7 +843,7 @@ export function TrainerChat() {
                   flexDirection: 'column',
                   gap: '0.35rem',
                   background: 'var(--color-bg)',
-                  backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)',
+                  backgroundImage: 'radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px)',
                   backgroundSize: '24px 24px',
                 }}
               >
@@ -858,18 +858,18 @@ export function TrainerChat() {
                         width: '60px',
                         height: '60px',
                         borderRadius: '50%',
-                        background: 'rgba(61, 255, 79, 0.08)',
-                        border: '1px solid rgba(61, 255, 79, 0.2)',
+                        background: 'var(--color-brand-dim)',
+                        border: '1px solid rgba(22, 163, 74, 0.25)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         margin: '0 auto 0.75rem',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+                        boxShadow: 'var(--shadow-card)',
                       }}
                     >
                       <Dumbbell size={26} color="var(--color-brand)" style={{ opacity: 0.8 }} />
                     </div>
-                    <p style={{ fontWeight: 700, fontSize: '0.95rem', color: '#fff', margin: 0 }}>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--color-text)', margin: 0 }}>
                       No messages with {selectedClient.full_name} yet
                     </p>
                     <p style={{ fontSize: '0.8rem', marginTop: '0.25rem', color: 'var(--color-text-muted)' }}>
@@ -1035,7 +1035,7 @@ export function TrainerChat() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = 'var(--color-brand)';
-                      e.currentTarget.style.color = '#fff';
+                      e.currentTarget.style.color = 'var(--color-brand)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.borderColor = 'var(--color-border)';
@@ -1075,7 +1075,7 @@ export function TrainerChat() {
                     background: 'var(--color-surface-2)',
                     fontSize: '0.925rem',
                     outline: 'none',
-                    color: '#FFFFFF',
+                    color: 'var(--color-text)',
                     boxSizing: 'border-box',
                   }}
                   autoComplete="off"
@@ -1097,11 +1097,11 @@ export function TrainerChat() {
                     justifyContent: 'center',
                     flexShrink: 0,
                     transition: 'all 0.15s ease',
-                    boxShadow: text.trim() ? '0 2px 8px rgba(61,255,79,0.35)' : 'none',
+                    boxShadow: text.trim() ? '0 2px 8px rgba(22, 163, 74, 0.3)' : 'none',
                   }}
                   aria-label="Send message"
                 >
-                  <Send size={16} color={text.trim() ? '#000000' : 'var(--color-text-muted)'} style={{ marginLeft: '2px' }} />
+                  <Send size={16} color={text.trim() ? '#FFFFFF' : 'var(--color-text-muted)'} style={{ marginLeft: '2px' }} />
                 </button>
               </form>
             </>

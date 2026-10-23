@@ -167,10 +167,10 @@ export function OnboardingPage() {
     <div style={styles.page}>
       {/* Header */}
       <div style={styles.header}>
-        <Dumbbell size={24} color="var(--color-gold)" />
+        <Dumbbell size={24} color="var(--color-brand)" />
         <div>
-          <p style={{ color: '#fff', fontWeight: 700 }}>BodyBuddy</p>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem' }}>
+          <p style={{ color: 'var(--color-text)', fontWeight: 700 }}>BodyBuddy</p>
+          <p style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem' }}>
             Step {step} of 3
           </p>
         </div>
@@ -183,8 +183,9 @@ export function OnboardingPage() {
             <div
               style={{
                 width: '2rem', height: '2rem', borderRadius: '50%',
-                background: s <= step ? 'var(--color-gold)' : 'rgba(255,255,255,0.2)',
-                color: s <= step ? 'var(--color-brand-dark)' : 'rgba(255,255,255,0.5)',
+                background: s <= step ? 'var(--color-brand)' : 'var(--color-surface-2)',
+                color: s <= step ? '#FFFFFF' : 'var(--color-text-muted)',
+                border: s <= step ? 'none' : '1px solid var(--color-border)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontWeight: 700, fontSize: '0.85rem',
                 transition: 'all 0.3s',
@@ -195,7 +196,7 @@ export function OnboardingPage() {
             {s < 3 && (
               <div style={{
                 width: '2rem', height: '2px',
-                background: s < step ? 'var(--color-gold)' : 'rgba(255,255,255,0.2)',
+                background: s < step ? 'var(--color-brand)' : 'var(--color-border)',
                 transition: 'all 0.3s',
               }} />
             )}

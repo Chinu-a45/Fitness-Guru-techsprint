@@ -604,7 +604,7 @@ CREATE POLICY "Trainers can delete completions for their clients"
                       <ChevronRight size={18} color="var(--color-text-muted)" style={{ flexShrink: 0, marginTop: '2px' }} />
                       <div>
                         <span style={{ color: 'var(--color-text-muted)', lineHeight: 1.3 }}>
-                          Viewing <strong style={{ color: '#fff' }}>Plan {viewingIdx + 1}</strong> — not the active plan. Save changes to make it active.
+                          Viewing <strong style={{ color: 'var(--color-text)' }}>Plan {viewingIdx + 1}</strong> — not the active plan. Save changes to make it active.
                         </span>
                       </div>
                     </div>
@@ -915,7 +915,7 @@ CREATE POLICY "Trainers can delete completions for their clients"
                 <Trash2 size={20} color="var(--color-error)" />
               </div>
               <div>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 800, margin: 0, color: '#fff' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 800, margin: 0, color: 'var(--color-text)' }}>
                   Delete Plan {viewingIdx !== null ? viewingIdx + 1 : ''}?
                 </h3>
                 <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', margin: 0 }}>

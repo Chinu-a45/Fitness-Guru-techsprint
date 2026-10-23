@@ -41,17 +41,17 @@ export function ProgressCharts() {
     setLoading(true);
     setError('');
 
-    // Fetch logs (weight + waist)
+    // Fetch logs (weight + waist + sleep)
     const { data: logs, error: logsErr } = await supabase
       .from('logs')
-      .select('date, weight_kg, waist_cm')
+      .select('date, weight_kg, waist_cm, sleep_hours')
       .eq('client_id', user.id)
       .order('date', { ascending: true });
 
     if (logsErr) { setError(logsErr.message); setLoading(false); return; }
 
     setWeightData(
-      (logs || []).map((l) => ({ date: shortDate(l.date), weight: l.weight_kg }))
+      (logs || []).filter((l) => l.weight_kg != null).map((l) => ({ date: shortDate(l.date), weight: l.weight_kg }))
     );
     setWaistData(
       (logs || []).filter((l) => l.waist_cm).map((l) => ({
